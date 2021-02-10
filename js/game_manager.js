@@ -59,7 +59,7 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9999999 ? Math.random() < 0.999999 ? Math.random() < 0.99995 ? Math.random() < 0.9995 ? Math.random() < 0.9984 ? 1 : 2 : Math.random() < 0.8 ? 3 : 4 : Math.random() < 0.9 ? Math.random() < 0.8 ? 5 : 6 : Math.random() < 0.75 ? 7 : 8 : Math.random() < 0.98 ? Math.random() < 0.9 ? Math.random() < 0.8 ? 9 : 10 : Math.random() < 0.75 ? 11 : 12 : Math.random() < 0.875 ? Math.random() < 0.75 ? 13 : 14 : Math.random() < 0.8 ? 15 : 16 : Math.random() < 0.999 ? Math.random() < 0.98 ? Math.random() < 0.875 ? Math.random() < 0.8 ? 33 : 34 : Math.random() < 0.75 ? 70 : 72 : Math.random() < 0.875 ? Math.random() < 0.75 ? 56 : 79 : Math.random() < 0.75 ? 20 : 25 : Math.random() < 0.95 ? Math.random() < 0.9 ? Math.random() < 0.5 ? 40 : 40 : Math.random() < 0.9 ? 88 : 88 : Math.random() < 0.8 ? Math.random() < 0.666666666666666666666 ? 91 : 92 : Math.random() < 0.99 ? 93 : 10000;
+    var value = Math.random() < 0.9998 ? Math.random() < 0.9996 ? Math.random() < 0.998 ? Math.random() < 0.995 ? Math.random() < 0.993 ? 1 : 2 : Math.random() < 0.66 ? 3 : 4 : Math.random() < 0.7 ? Math.random() < 0.66 ? 5 : 6 : Math.random() < 0.66 ? 7 : 8 : Math.random() < 0.8 ? Math.random() < 0.7 ? Math.random() < 0.66 ? 9 : 10 : Math.random() < 0.66 ? 11 : 12 : Math.random() < 0.7 ? Math.random() < 0.66 ? 13 : 14 : Math.random() < 0.66 ? 15 : 16 : Math.random() < 0.83 ? Math.random() < 0.8 ? Math.random() < 0.7 ? Math.random() < 0.66 ? 17 : 18 : Math.random() < 0.66 ? 19 : 20 : Math.random() < 0.7 ? Math.random() < 0.66 ? 21 : 22 : Math.random() < 0.66 ? 23 : 24 : Math.random() < 0.8 ? Math.random() < 0.7 ? Math.random() < 0.66 ? 25 : 26 : Math.random() < 0.66 ? 27 : 28 : Math.random() < 0.7 ? Math.random() < 0.66 ? 29 : 30 : Math.random() < 0.66 ? 31 : 32;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
@@ -139,8 +139,8 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 10 tile
-          if (merged.value === 10) self.won = true;
+          // The mighty 32 tile
+          if (merged.value === 32) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
