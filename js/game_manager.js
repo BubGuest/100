@@ -4,7 +4,7 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
   this.scoreManager = new ScoreManager;
   this.actuator     = new Actuator;
 
-  this.startTiles   = 1;
+  this.startTiles   = 2;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -59,7 +59,7 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9998 ? Math.random() < 0.9996 ? Math.random() < 0.998 ? Math.random() < 0.995 ? Math.random() < 0.993 ? 1 : 2 : Math.random() < 0.66 ? 3 : 4 : Math.random() < 0.7 ? Math.random() < 0.66 ? 5 : 6 : Math.random() < 0.66 ? 7 : 8 : Math.random() < 0.8 ? Math.random() < 0.7 ? Math.random() < 0.66 ? 9 : 10 : Math.random() < 0.66 ? 11 : 12 : Math.random() < 0.7 ? Math.random() < 0.66 ? 13 : 14 : Math.random() < 0.66 ? 15 : 16 : Math.random() < 0.83 ? Math.random() < 0.8 ? Math.random() < 0.7 ? Math.random() < 0.66 ? 17 : 18 : Math.random() < 0.66 ? 19 : 20 : Math.random() < 0.7 ? Math.random() < 0.66 ? 21 : 22 : Math.random() < 0.66 ? 23 : 24 : Math.random() < 0.8 ? Math.random() < 0.7 ? Math.random() < 0.66 ? 25 : 26 : Math.random() < 0.66 ? 27 : 28 : Math.random() < 0.7 ? Math.random() < 0.66 ? 29 : 30 : Math.random() < 0.66 ? 31 : 32;
+    var value = Math.random() < 0.9995 ? Math.random() < 0.999 ? Math.random() < 0.997 ? Math.random() < 0.994 ? Math.random() < 0.99 ? 1 : 2 : Math.random() < 0.6 ? 3 : 4 : Math.random() < 0.66 ? Math.random() < 0.6 ? 5 : 6 : Math.random() < 0.6 ? 7 : 8 : Math.random() < 0.7 ? Math.random() < 0.66 ? Math.random() < 0.6 ? 9 : 10 : Math.random() < 0.6 ? 11 : 12 : Math.random() < 0.6 ? Math.random() < 0.6 ? 13 : 14 : Math.random() < 0.6 ? 15 : 16 : Math.random() < 0.75 ? Math.random() < 0.7 ? Math.random() < 0.66 ? Math.random() < 0.6 ? 17 : 18 : Math.random() < 0.6 ? 19 : 20 : Math.random() < 0.66 ? Math.random() < 0.6 ? 21 : 22 : Math.random() < 0.6 ? 23 : 24 : Math.random() < 0.7 ? Math.random() < 0.66 ? Math.random() < 0.6 ? 25 : 26 : Math.random() < 0.6 ? 27 : 28 : Math.random() < 0.66 ? Math.random() < 0.6 ? 29 : 30 : Math.random() < 0.6 ? 31 : 32;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
